@@ -1,0 +1,20 @@
+<article class="panel panel-default aa" >
+    <div class="panel-body">
+        name:{{info.firstName}}
+    </div>
+    <div class="panel-body">
+        partysize:{{info.size}}
+    </div>
+    <div class="panel-body">
+        table:{{info.t}}
+    </div>
+    <footer class="panel-footer">
+        <div class="author">
+            date:{{ info.date }}
+        </div>
+        <div class="config" >
+            <a (click)="onEdit()">Edit</a>
+            <a (click)="onDelete()">Delete</a>
+        </div>
+    </footer>
+</article>

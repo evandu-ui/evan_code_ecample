@@ -1,0 +1,60 @@
+<div class="col-md-8 col-md-offset-2">
+    <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label for="firstName"> Name</label>
+            <input
+                    type="text"
+                    id="firstName"
+                    class="form-control"
+                    formControlName="firstName">
+        </div>
+        <div class="form-group">
+            <label for="date">date</label>
+            <input
+                    type="text"
+                    id="date"
+                    class="form-control"
+                    formControlName="date">
+        </div>
+        <div class="form-group">
+            <label for="email">eMail</label>
+            <input
+                    type="email"
+                    id="email"
+                    class="form-control"
+                    formControlName="email">
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input
+                    type="password"
+                    id="password"
+                    class="form-control"
+                    formControlName="password">
+        </div>
+        <div class="form-group">
+            <label for="size">Partysize</label>
+            <input
+                    type="string"
+                    id="size"
+                    class="form-control"
+                    formControlName="size">
+        </div>
+        <div class="form-group">
+            <label for="t">table</label>
+            <input
+                    type="string"
+                    id="t"
+                    class="form-control"
+                    formControlName="t">
+        </div>
+
+        <button
+                class="btn btn-primary"
+                type="submit"
+                [disabled]="!myForm.valid">Submit</button>
+    </form>
+</div>
+<p></p>
+<p></p>
+<div *ngIf="show!=''">your status code is {{show}}</div>

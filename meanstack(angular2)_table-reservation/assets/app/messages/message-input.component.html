@@ -1,0 +1,29 @@
+<div class="col-md-8 col-md-offset-2 cc" >
+    <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+        <div class="form-group">
+            <label for="date">date</label>
+            <input
+                    type="text"
+                    id="date"
+                    class="form-control"
+                    [ngModel]="message?.date"
+                    name="date"
+                    required>
+        </div>
+
+        <div class="form-group">
+            <label for="size">partysize</label>
+            <input
+                    type="text"
+                    id="size"
+                    class="form-control"
+                    [ngModel]="message?.size"
+                    name="size"
+                    required>
+        </div>
+
+
+        <button type="button" class="btn btn-danger" (click)="onClear(f)">Clear</button>
+        <button class="btn btn-primary" type="submit">Save</button>
+    </form>
+</div>

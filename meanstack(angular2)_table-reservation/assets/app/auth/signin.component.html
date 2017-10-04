@@ -1,0 +1,38 @@
+<div class="col-md-8 col-md-offset-2">
+    <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label for="email">eMail</label>
+            <input
+                    type="email"
+                    id="email"
+                    class="form-control"
+                    formControlName="email">
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input
+                    type="password"
+                    id="password"
+                    class="form-control"
+                    formControlName="password">
+        </div>
+        <div class="form-group" [hidden]="e==''">
+            <label for="code">statuscode</label>
+            <input
+                    type="string"
+                    id="code"
+                    class="form-control"
+                    formControlName="code">
+        </div>
+
+
+        <button
+                class="btn btn-primary"
+                type="submit"
+                [disabled]="!myForm.valid">Submit</button>
+    </form>
+</div>
+<p></p>
+<p></p>
+<p></p>
+<div *ngIf="e!=''">{{e}}</div>

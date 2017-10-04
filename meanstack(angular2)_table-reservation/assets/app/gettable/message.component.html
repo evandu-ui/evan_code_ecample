@@ -1,0 +1,30 @@
+<article class="panel panel-default">
+
+    <div class="panel-body">
+        Name:{{ message.firstName }}
+    </div>
+    <div class="panel-body">
+        Date:{{ message.date }}
+    </div>
+    <div class="panel-body">
+        Email:{{ message.email }}
+    </div>
+    <div class="panel-body">
+        Status:{{ message.status }}
+    </div>
+    <div class="panel-body">
+        partysize:{{ message.size }}
+    </div>
+    <div class="panel-body">
+        table:{{ message.number }}
+    </div>
+    <footer class="panel-footer">
+        <div class="author">
+            tablesize:{{ message.tsize }}
+        </div>
+    <div class="config" >
+        <a (click)="onEdit()">Edit</a>
+        <a (click)="onDelete()">Delete</a>
+    </div>
+    </footer>
+</article>
